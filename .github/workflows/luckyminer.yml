@@ -2,7 +2,7 @@ name: build-luckyminer
 
 on:
   push:
-    branches: [main]
+    branches: [dev, main]
     paths:
       - "acalatrava-luckyminer/**"
       - ".github/workflows/luckyminer.yml"
