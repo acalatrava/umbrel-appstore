@@ -2,39 +2,43 @@ manifestVersion: 1
 id: acalatrava-luckyminer
 name: Lucky Miner
 tagline: Because if there is a hash, there is a chance.
-icon: https://github.com/acalatrava/umbrel-appstore/blob/master/acalatrava-luckyminer/luckyminer.png
+icon: https://raw.githubusercontent.com/acalatrava/umbrel-appstore/refs/heads/main/acalatrava-luckyminer/luckyminer.png
 category: Utilities
 version: "1.0.1"
 port: 4000
 description: >-
   Lucky Miner is a lightweight CPU mining app for Umbrel that lets you solo mine Bitcoin just for the thrill of it. Think of it as the software equivalent of a Nerdminer — a fun, lotto-style mining experiment where you use your CPU to participate in Bitcoin mining.
 
-  **What is Lucky Miner? (Think Nerdminer, but Software)**
+  <strong>What is Lucky Miner? (Think Nerdminer, but Software)</strong>
 
   If you're familiar with Nerdminer devices — those compact ESP32-based hardware miners that solo mine Bitcoin for fun — then you already understand Lucky Miner. Lucky Miner is essentially the software equivalent of a Nerdminer, but running on your Umbrel device instead of requiring dedicated hardware.
 
-  **The "Lottery Mining" Concept**
+  <strong>The "Lottery Mining" Concept</strong>
 
   Both Nerdminer and Lucky Miner embrace the same philosophy: "lottery mining" or "solo mining for fun". The probability of finding a block is astronomically low, but if you do find one, you get the entire block reward (currently 3.125 BTC + fees). It's about participating in the Bitcoin network, learning about mining, and the excitement of the possibility — not about profitability, but about the adventure.
 
-  **Features**
+  <strong>Features</strong>
 
-  - CPU Mining with automatic thread detection
-  - Web interface for configuration and monitoring
-  - Real-time statistics (hash rate, shares, difficulty)
-  - Stratum support for any compatible mining pool
-  - Background operation with auto-start capability
+  <ul>
+  <li>CPU Mining with automatic thread detection</li>
+  <li>Web interface for configuration and monitoring</li>
+  <li>Real-time statistics (hash rate, shares, difficulty)</li>
+  <li>Stratum support for any compatible mining pool</li>
+  <li>Background operation with auto-start capability</li>
+  </ul>
 
-  **Recommended Setup**
+  <strong>Recommended Setup</strong>
 
   For the best solo mining experience, we highly recommend using Lucky Miner with:
 
-  - **Bitcoin Node**: Run your personal Bitcoin node powered by Bitcoin Core. Independently store and validate every Bitcoin transaction while helping keep the network decentralized.
-  - **Public Pool**: A fully open-source solo Bitcoin mining pool that lets you run your own pool using your own node. If you successfully mine a block, you receive the entire block reward — no splitting with other miners, no fees, no middleman.
+  <ul>
+  <li><strong>Bitcoin Node</strong>: Run your personal Bitcoin node powered by Bitcoin Core. Independently store and validate every Bitcoin transaction while helping keep the network decentralized.</li>
+  <li><strong>Public Pool</strong>: A fully open-source solo Bitcoin mining pool that lets you run your own pool using your own node. If you successfully mine a block, you receive the entire block reward — no splitting with other miners, no fees, no middleman.</li>
+  </ul>
 
   When using Lucky Miner with Public Pool and your own Bitcoin Node, you're participating in true solo mining. You're helping decentralize Bitcoin mining, maintaining full control over your operation, and if you find a block, you receive 100% of the reward.
 
-  **Important Notes**
+  <strong>Important Notes</strong>
 
   ⚠️ This app is for educational and entertainment purposes. CPU mining Bitcoin is not profitable and should not be considered a source of income. The chances of finding a block with CPU mining are extremely low. CPU mining uses all available cores and will result in high CPU usage.
 
@@ -47,7 +51,7 @@ submission: https://github.com/acalatrava/umbrel-appstore
 repo: https://github.com/acalatrava/umbrel-appstore
 support: https://github.com/acalatrava/umbrel-appstore/issues
 gallery:
-  - https://github.com/acalatrava/umbrel-appstore/blob/master/acalatrava-luckyminer/screenshot.png
+  - https://raw.githubusercontent.com/acalatrava/umbrel-appstore/refs/heads/main/acalatrava-luckyminer/screenshot.png
 releaseNotes: >-
   Initial release with web interface for CPU mining configuration and mining management.
 dependencies: []
