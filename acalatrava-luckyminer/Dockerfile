@@ -9,7 +9,8 @@ RUN cd /tmp && \
     ./autogen.sh && \
     ./configure --enable-cpumining && \
     sed -i "s/void (\*cgsleep_us_r/extern void (\*cgsleep_us_r/" util.h && \
-    sed -i "s/^\(const uint32_t g_4sha256_k\[\)/static \1/" sha256_sse4_amd64.c && \
+    sed -i "s/^__m128i g_4sha256_k\[/static __m128i g_4sha256_k[/" sha256_sse4_amd64.c && \
+    sed -i "s/^__m128i g_4sha256_k\[/static __m128i g_4sha256_k[/" sha256_sse2_amd64.c && \
     make && \
     make install && \
     ldconfig /usr/local/lib && \
