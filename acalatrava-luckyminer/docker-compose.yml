@@ -1,0 +1,18 @@
+services:
+  app_proxy:
+    environment:
+      APP_HOST: acalatrava-bfgminer_server_1
+      APP_PORT: 3000
+
+  server:
+    build:
+      context: https://github.com/acalatrava/umbrel-bfgminer.git#02d33ce20ef8d894ce9cbb3746f0cf64052f6b5e:acalatrava-bfgminer
+      dockerfile: Dockerfile
+    init: true
+    volumes:
+      - ${APP_DATA_DIR}/data:/app/data
+    devices:
+      - /dev/dri:/dev/dri
+    privileged: true
+    environment:
+      - NODE_ENV=production

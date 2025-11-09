@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Miner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Lucky Miner</h1>
+            <p class="subtitle">Because if there is a hash, there is a chance.</p>
+        </header>
+
+        <div class="status-card">
+            <div class="status-indicator" id="statusIndicator">
+                <span class="status-dot"></span>
+                <span id="statusText">Checking status...</span>
+            </div>
+        </div>
+
+        <div class="stats-card" id="statsCard" style="display: none;">
+            <h2>Mining Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <label>Hash Rate</label>
+                    <div class="stat-value" id="hashRate">-</div>
+                </div>
+                <div class="stat-item">
+                    <label>Accepted Shares</label>
+                    <div class="stat-value" id="acceptedShares">-</div>
+                </div>
+                <div class="stat-item">
+                    <label>Rejected Shares</label>
+                    <div class="stat-value" id="rejectedShares">-</div>
+                </div>
+                <div class="stat-item">
+                    <label>Difficulty</label>
+                    <div class="stat-value" id="difficulty">-</div>
+                </div>
+            </div>
+            <div class="devices-section" id="devicesSection" style="display: none;">
+                <h3>Devices</h3>
+                <div id="devicesList"></div>
+            </div>
+        </div>
+
+        <div class="config-card">
+            <h2>Stratum Configuration</h2>
+            <form id="configForm">
+                <div class="form-group">
+                    <label for="stratum">Stratum URL</label>
+                    <input type="text" id="stratum" name="stratum" placeholder="stratum+tcp://pool.example.com:3333"
+                        required>
+                    <small>Format: stratum+tcp://host:port</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username/Worker</label>
+                    <input type="text" id="username" name="username" placeholder="wallet_address.worker_name" required>
+                    <small>Your wallet address or pool username</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password (optional)</label>
+                    <input type="text" id="password" name="password" placeholder="x">
+                    <small>Pool password (usually 'x' or empty)</small>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" id="saveAndStartBtn" class="btn btn-success">Save & Start</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="stop-card" id="stopCard" style="display: none;">
+            <button type="button" id="stopBtn" class="btn btn-danger btn-large">Stop Mining</button>
+        </div>
+
+        <div class="info-card">
+            <h3>Information</h3>
+            <p>Lucky Miner will run in the background once started. You can configure the Stratum pool settings above
+                and
+                start/stop mining as needed.</p>
+            <p><strong>Note:</strong> This miner uses CPU only with automatic thread detection.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
