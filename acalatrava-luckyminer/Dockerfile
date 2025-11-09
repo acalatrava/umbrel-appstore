@@ -7,11 +7,9 @@ RUN cd /tmp && \
     cd bfgminer-debian && \
     chmod +x *.sh && \
     ./autogen.sh && \
-    ./configure --enable-cpumining && \
+    ./configure --enable-cpumining CFLAGS="-fcommon" && \
     sed -i "s/void (\*cgsleep_us_r/extern void (\*cgsleep_us_r/" util.h && \
-    sed -i "s/^__m128i g_4sha256_k\[/static __m128i g_4sha256_k[/" sha256_sse4_amd64.c && \
-    sed -i "s/^__m128i g_4sha256_k\[/static __m128i g_4sha256_k[/" sha256_sse2_amd64.c && \
-    make && \
+    make LDFLAGS="-Wl,--allow-multiple-definition" && \
     make install && \
     ldconfig /usr/local/lib && \
     cd / && \
