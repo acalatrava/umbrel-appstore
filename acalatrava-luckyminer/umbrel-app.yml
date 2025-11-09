@@ -9,17 +9,21 @@ port: 4000
 description: >-
   Lucky Miner is a lightweight CPU mining app for Umbrel that lets you solo mine Bitcoin just for the thrill of it. Think of it as the software equivalent of a Nerdminer — a fun, lotto-style mining experiment where you use your CPU to participate in Bitcoin mining.
 
+
   What is Lucky Miner? (Think Nerdminer, but Software)
 
   If you're familiar with Nerdminer devices — those compact ESP32-based hardware miners that solo mine Bitcoin for fun — then you already understand Lucky Miner. Lucky Miner is essentially the software equivalent of a Nerdminer, but running on your Umbrel device instead of requiring dedicated hardware.
+
 
   The "Lottery Mining" Concept
 
   Both Nerdminer and Lucky Miner embrace the same philosophy: "lottery mining" or "solo mining for fun". The probability of finding a block is astronomically low, but if you do find one, you get the entire block reward (currently 3.125 BTC + fees). It's about participating in the Bitcoin network, learning about mining, and the excitement of the possibility — not about profitability, but about the adventure.
 
+
   Features
 
   CPU Mining with automatic thread detection, web interface for configuration and monitoring, real-time statistics (hash rate, shares, difficulty), Stratum support for any compatible mining pool, and background operation with auto-start capability.
+
 
   Recommended Setup
 
@@ -27,9 +31,11 @@ description: >-
 
   When using Lucky Miner with Public Pool and your own Bitcoin Node, you're participating in true solo mining. You're helping decentralize Bitcoin mining, maintaining full control over your operation, and if you find a block, you receive 100% of the reward.
 
+
   Important Notes
 
   This app is for educational and entertainment purposes. CPU mining Bitcoin is not profitable and should not be considered a source of income. The chances of finding a block with CPU mining are extremely low. CPU mining uses all available cores and will result in high CPU usage.
+
 
   Because hey, if there's a hash, there's a chance.
 
