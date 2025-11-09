@@ -6,7 +6,7 @@ services:
 
   server:
     build:
-      context: https://github.com/acalatrava/umbrel-bfgminer.git#02d33ce20ef8d894ce9cbb3746f0cf64052f6b5e:acalatrava-bfgminer
+      context: https://github.com/acalatrava/umbrel-appstore.git#8a4d789c9c20bbda7554a22fbcadf12cf73e32c4:acalatrava-luckyminer
       dockerfile: Dockerfile
     init: true
     volumes:
