@@ -1,7 +1,7 @@
 {
-    "name": "acalatrava-bfgminer",
+    "name": "acalatrava-luckyminer",
     "version": "1.0.0",
-    "description": "BFGMiner management interface for Umbrel",
+    "description": "Lucky Miner management interface for Umbrel",
     "main": "server.js",
     "scripts": {
         "start": "node server.js"

@@ -1,7 +1,7 @@
 services:
   app_proxy:
     environment:
-      APP_HOST: acalatrava-bfgminer_server_1
+      APP_HOST: acalatrava-luckyminer_server_1
       APP_PORT: 3000
 
   server:
