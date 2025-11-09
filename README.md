@@ -34,7 +34,7 @@ To add this app store to your Umbrel instance:
 2. Navigate to Settings → App Store
 3. Add a new app store with the following URL:
    ```
-   https://raw.githubusercontent.com/acalatrava/umbrel-appstore/main/umbrel-app-store.yml
+   https://github.com/acalatrava/umbrel-appstore
    ```
 
 ### Repository
