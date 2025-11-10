@@ -8,21 +8,14 @@ ENV CFLAGS="${BUILD_CFLAGS:- -O3 -pipe}"
 RUN apt-get update && apt-get install -y build-essential uthash-dev libjansson-dev libbase58-0 yasm gosu
 
 RUN cd /tmp && \
-    git clone https://github.com/duriantang/bfgminer-debian && \
+    git clone https://github.com/acalatrava/bfgminer-debian && \
     cd bfgminer-debian && \
     chmod +x *.sh && \
-    ./autogen.sh && \
-    case "$TARGETPLATFORM" in \
-        linux/amd64) export CFLAGS="-O3 -pipe -march=x86-64-v2 -mtune=generic -fcommon" ;; \
-        linux/arm64) export CFLAGS="-O3 -pipe -mcpu=neoverse-n1 -mtune=generic -fcommon" ;; \
-    esac && \
-    ./configure --enable-cpumining --with-system-openssl && \
-    sed -i "s/void (\*cgsleep_us_r/extern void (\*cgsleep_us_r/" util.h && \
-    make LDFLAGS="-Wl,--allow-multiple-definition" -j"$(nproc)" && \
+    ./build-optimized.sh && \
     make install && \
     ldconfig /usr/local/lib && \
     cd / && \
-    rm -rf /tmp/bfgminer
+    rm -rf /tmp/bfgminer-debian
 
 WORKDIR /app
 

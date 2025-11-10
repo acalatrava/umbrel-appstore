@@ -4,7 +4,7 @@ name: Lucky Miner
 tagline: Because if there is a hash, there is a chance.
 icon: https://raw.githubusercontent.com/acalatrava/umbrel-appstore/refs/heads/main/acalatrava-luckyminer/luckyminer.png
 category: Utilities
-version: "1.0.3"
+version: "1.0.4"
 port: 43813
 description: >-
   Lucky Miner is a lightweight CPU mining app for Umbrel that lets you solo mine Bitcoin just for the thrill of it. Think of it as the software equivalent of a Nerdminer — a fun, lotto-style mining experiment where you use your CPU to participate in Bitcoin mining.

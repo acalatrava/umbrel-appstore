@@ -55,7 +55,7 @@ jobs:
 
       - name: Base tag (dev/main)
         run: |
-          if [ "${GITHUB_REF##*/}" = "main" ]; then echo "BASE_TAG=latest" >> $GITHUB_ENV; else echo "BASE_TAG=dev" >> $GITHUB_ENV; fi
+          if [ "${GITHUB_REF##*/}" = "main" ]; then echo "BASE_TAG=latest" >> $GITHUB_ENV; else echo "BASE_TAG=$(git rev-parse --short=8 HEAD)" >> $GITHUB_ENV; fi
 
       - name: Build & push (native per-arch)
         uses: docker/build-push-action@v6
