@@ -13,10 +13,10 @@ RUN cd /tmp && \
     chmod +x *.sh && \
     ./autogen.sh && \
     case "$TARGETPLATFORM" in \
-        linux/amd64) export CFLAGS="-O3 -pipe -march=x86-64-v2 -mtune=generic" ;; \
-        linux/arm64) export CFLAGS="-O3 -pipe -mcpu=neoverse-n1 -mtune=generic" ;; \
+        linux/amd64) export CFLAGS="-O3 -pipe -march=x86-64-v2 -mtune=generic -fcommon" ;; \
+        linux/arm64) export CFLAGS="-O3 -pipe -mcpu=neoverse-n1 -mtune=generic -fcommon" ;; \
     esac && \
-    ./configure --enable-cpumining --with-system-openssl CFLAGS="-fcommon" && \
+    ./configure --enable-cpumining --with-system-openssl && \
     sed -i "s/void (\*cgsleep_us_r/extern void (\*cgsleep_us_r/" util.h && \
     make LDFLAGS="-Wl,--allow-multiple-definition" -j"$(nproc)" && \
     make install && \
