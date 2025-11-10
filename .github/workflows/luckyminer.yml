@@ -6,6 +6,8 @@ on:
     paths:
       - "acalatrava-luckyminer/**"
       - ".github/workflows/luckyminer.yml"
+      - "!acalatrava-luckyminer/docker-compose.yml"
+
   workflow_dispatch:
     inputs:
       tag:
@@ -45,9 +47,11 @@ jobs:
             type=raw,value=${{ github.event.inputs.tag }},enable=${{ github.event.inputs.tag != '' }}
             type=sha
           labels: |
-            org.opencontainers.image.source=${{ github.repository }}
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}/tree/${{ github.ref_name }}/acalatrava-luckyminer
             org.opencontainers.image.title=luckyminer
             org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.description=CPU “lottery” miner for Umbrel. Not for profit, just fun.
+            org.opencontainers.image.url=https://github.com/${{ github.repository }}/tree/${{ github.ref_name }}/acalatrava-luckyminer
 
       - name: Build & push (multi-arch)
         uses: docker/build-push-action@v6
