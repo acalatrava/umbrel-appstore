@@ -7,9 +7,9 @@ RUN cd /tmp && \
     cd bfgminer-debian && \
     chmod +x *.sh && \
     ./autogen.sh && \
-    ./configure --enable-cpumining && \
+    ./configure --enable-cpumining CFLAGS="-fcommon" && \
     sed -i "s/void (\*cgsleep_us_r/extern void (\*cgsleep_us_r/" util.h && \
-    make && \
+    make LDFLAGS="-Wl,--allow-multiple-definition" && \
     make install && \
     ldconfig /usr/local/lib && \
     cd / && \

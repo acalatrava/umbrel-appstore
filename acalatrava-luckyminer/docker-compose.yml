@@ -5,9 +5,7 @@ services:
       APP_PORT: 3000
 
   server:
-    build:
-      context: https://github.com/acalatrava/umbrel-appstore.git#8a4d789c9c20bbda7554a22fbcadf12cf73e32c4:acalatrava-luckyminer
-      dockerfile: Dockerfile
+    image: ghcr.io/acalatrava/luckyminer:sha-b57b61f
     init: true
     volumes:
       - ${APP_DATA_DIR}/data:/app/data
