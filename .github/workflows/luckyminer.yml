@@ -35,7 +35,7 @@ jobs:
             cflags: "-O3 -pipe -march=x86-64-v2 -mtune=generic"
           - arch: arm64
             platform: linux/arm64
-            os: ubuntu-24.04-arm64
+            os: ubuntu-24.04-arm
             cflags: "-O3 -pipe -mcpu=neoverse-n1 -mtune=generic"
     runs-on: ${{ matrix.os }}
     concurrency:
