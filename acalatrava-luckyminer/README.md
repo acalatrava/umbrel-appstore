@@ -236,6 +236,7 @@ Current version: **1.0.1**
 *Remember: If there's a hash, there's a chance. Happy mining! 🍀*
 
 Donations are welcome:
+
 **Bitcoin** bc1pvap9emf3mw0y2led0rv9jpuwls02uzg2hj7ksz4dpuflwxw6sj3saz9c2h
 
 **Lightning network** lno1zrxq8pjw7qjlm68mtp7e3yvxee4y5xrgjhhyf2fxhlphpckrvevh50u0q08c26rl8zf50c99vw8pe2tulrmcrlhnm0mf99dy26emmjpczve2gqsry4kwrvx5q8men93uevj4f4quea3w3tf6ayfjaq0c806m6h4lj53qqvmeze7qcmgckqfywzns5hdx0vzyfn9azzdsheyguns0z0wkwrczu339pk47pwkfck5uk5ry90u4hfcrug6jq0t39g2xqkkdks84xmf9pqa33mxmsq5qqus9z5a3axvje50cfd6l7qqsejg762d4ygrs7y9w89upc5fndv

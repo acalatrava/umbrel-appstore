@@ -7,6 +7,10 @@ on:
       - "acalatrava-luckyminer/**"
       - ".github/workflows/luckyminer.yml"
       - "!acalatrava-luckyminer/docker-compose.yml"
+      - "!acalatrava-luckyminer/README.md"
+      - "!acalatrava-luckyminer/umbrel-app.yml"
+      - "!acalatrava-luckyminer/screenshot.png"
+      - "!acalatrava-luckyminer/luckyminer.png"
 
   workflow_dispatch:
     inputs:
