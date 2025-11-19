@@ -133,6 +133,23 @@ function formatHashRate(rate) {
     return `${(rate / 1000000000).toFixed(2)} GH/s`;
 }
 
+function formatDifficulty(value) {
+    const difficulty = parseFloat(value);
+    if (!difficulty || Number.isNaN(difficulty)) return '-';
+
+    const units = ['', 'K', 'M', 'B', 'T'];
+    let scaled = difficulty;
+    let index = 0;
+
+    while (scaled >= 1000 && index < units.length - 1) {
+        scaled /= 1000;
+        index += 1;
+    }
+
+    const formatted = scaled >= 100 ? scaled.toFixed(0) : scaled.toFixed(2);
+    return `${formatted} ${units[index]}`.trim();
+}
+
 async function updateMiningStats() {
     if (!currentStatus) return;
 
@@ -143,7 +160,7 @@ async function updateMiningStats() {
             document.getElementById('hashRate').textContent = formatHashRate(parseFloat(data['MHS av']) * 1000000);
             document.getElementById('acceptedShares').textContent = data['Accepted'] || '0';
             document.getElementById('rejectedShares').textContent = data['Rejected'] || '0';
-            document.getElementById('difficulty').textContent = data['Difficulty Accepted'] || '-';
+            document.getElementById('difficulty').textContent = formatDifficulty(data['Difficulty Accepted']);
         }
 
         const devs = await fetchAPI('/mining/devs');
